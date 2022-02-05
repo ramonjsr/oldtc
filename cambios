@@ -1,0 +1,15 @@
+6. Hacer un inicio para un usuario administrador (puede ser en el menú principal, que en cambio de llevar los pedidos en la base de datos, tenga un apartado de usuario supremo, donde pueda agregar, modificar, eliminar productos de una forma más amigable y no por la base de datos 🙁 lleve un registro de ventas, de pagos, de clientes y productos)
+
+10. Que reporte una factura y que el número de factura no se repita y siga contando (aquí va más que todo con el checkout que pida solo un campo de nombre y apellido y no dos como está en el sistema, pida cedula, el campo de teléfono colócale 000-0000000 porque confunde que abajo este un número de teléfono de ejemplo y valide que sean 11 numeros 
+
+11. Que la base de datos sea más robusta y no tan sencilla 
+Que haya un campo de clientes.
+
+Productos
+Pedidos
+Ventas
+Pagos
+Facturas 
+Y de estos puedan registrarse, buscar, actualizar, imprimir
+
+---- Agregar hora a la fecha en la columna fecha de la tabla pedidos
