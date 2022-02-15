@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Clientes - TwoChefs</title>
+	<!-- JQuery -->
+	<script src="../../assets/js/jquery-3.5.1.js"></script>
+	<!-- FontAwesome -->
+	<script src="../../assets/js/7b31fa78fb.js"></script>
+	<!-- Bootstrap -->
+	<link rel="stylesheet" href="../../assets/css/bootstrap.min.css">
+	<!-- Bootstrap JS -->
+	<script src="../../assets/js/bootstrap.min.js"></script>
+	<link rel="stylesheet" type="text/css" href="../../assets/css/admin/products/index.css">
+</head>
+<body>
+	<header class="d-flex flex-row shadow-sm">
+		<div class="w-25 m-2">
+			<img src="../../assets/images/logo/logo.png" alt="logo" class="w-25" onclick="location.href='../';">
+		</div>
+		<div class="w-75 d-flex justify-content-end align-items-center">
+			<a class="text-decoration-none" href="../home/">
+				<span class="text-danger font-weight-bold mr-4">Atrás</span>
+			</a>
+		</div>
+	</header>
+	<section class="container d-flex justify-content-center">
+		<span class="option justify-content-center p-4 text-secondary" onclick="callForm('clients', 'add')">Agregar</span>
+		<span class="option justify-content-center p-4 text-secondary" onclick="callForm('clients', 'list')">Listar</span>
+		<span class="option justify-content-center p-4 text-secondary" onclick="callForm('clients', 'del')">Eliminar</span>
+	</section>
+	<section class="container d-flex justify-content-center">
+		<article class="container client clients-holder">
+			
+		</article>
+	</section>
+	<script src="../../assets/js/axios.min.js"></script>
+	<script src="../../assets/js/admin/invoices/callForm.js"></script>
+</body>
+</html>

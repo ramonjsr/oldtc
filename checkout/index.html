@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Checkout - TwoChef's</title>
+	<!-- jQuery -->
+	<script src="../assets/js/jquery-3.5.1.slim.min.js"></script>
+	<!-- Popper.js -->
+	<script src="../assets/js/popper.min.js"></script>
+	<!-- Bootstrap (Javascript) -->
+	<script src="../assets/js/bootstrap.min.js"></script>
+	<!-- FontAwesome -->
+	<script src="../assets/js/7b31fa78fb.js"></script>
+	<!-- Axios -->
+	<script src="../assets/js/axios.min.js"></script>
+	<!-- Dropzone.js -->
+	<script src="../assets/js/dropzone.min.js"></script>
+	<!-- Bootstrap (CSS) -->
+	<link rel="stylesheet" href="../assets/css/bootstrap.min.css">
+	<!-- Dropzone (CSS) -->
+	<link rel="stylesheet" href="../assets/css/dropzone.min.css" type="text/css"/>
+	<!-- Custom CSS -->
+	<link rel="stylesheet" href="../assets/css/home/index.css">
+	
+</head>
+<body>
+	<div class="modal" tabindex="-1" role="dialog" id="pmModal">
+  		<div class="modal-dialog" role="document">
+    		<div class="modal-content">
+      			<div class="modal-header">
+        			<h5 class="modal-title">Bancos</h5>
+        			<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          				<span aria-hidden="true">&times;</span>
+        			</button>
+      			</div>
+      		<div class="modal-body">
+    			<h4>REALIZAR PAGOS AL CAMBIO A TASA DE enparalelovzla <br>Pago móvil
+    				<small>Banesco  0134</small>
+    				<small>04128770646</small>
+    				<small>V.- 15678462</small>
+    				</h4>
+                <h4>
+                	<small>Mercantil  0105</small>
+					<small>04249207903</small>
+					<small>V.- 16478934</small>
+                </h4>    
+      		</div>
+  				<div class="modal-footer">
+        			<button type="button" class="btn btn-success" data-dismiss="modal">Aceptar</button>
+      			</div>
+    		</div>
+  		</div>
+	</div>
+	<div class="modal" tabindex="-1" role="dialog" id="bankModal">
+  		<div class="modal-dialog" role="document">
+    		<div class="modal-content">
+      			<div class="modal-header">
+        			<h5 class="modal-title">Bancos</h5>
+        			<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          				<span aria-hidden="true">&times;</span>
+        			</button>
+      			</div>
+      		<div class="modal-body">
+    			<h4>REALIZAR PAGOS AL CAMBIO A TASA DE enparalelovzla <br>BANESCO
+    				<small>Two Chefs E G C A</small>
+    				<small>01340196941961021954</small>
+    				<small>J.- 410293853</small>
+    				<small>Corriente</small>
+    			</h4>
+      		</div>
+  				<div class="modal-footer">
+        			<button type="button" class="btn btn-success" data-dismiss="modal">Aceptar</button>
+      			</div>
+    		</div>
+  		</div>
+	</div>
+	<div class="modal" tabindex="-1" role="dialog" id="zelleModal">
+  		<div class="modal-dialog" role="document">
+    		<div class="modal-content">
+      			<div class="modal-header">
+        			<h5 class="modal-title">Bancos</h5>
+        			<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          				<span aria-hidden="true">&times;</span>
+        			</button>
+      			</div>
+      		<div class="modal-body">
+    			<h4>ZELLE
+    				<small>twochefs2@gmail.com</small>
+    			</h4>
+      		</div>
+  				<div class="modal-footer">
+        			<button type="button" class="btn btn-success" data-dismiss="modal">Aceptar</button>
+      			</div>
+    		</div>
+  		</div>
+	</div>
+	<div class="modal" tabindex="-1" role="dialog" id="orderModal">
+  		<div class="modal-dialog" role="document">
+    		<div class="modal-content">
+      			<div class="modal-header">
+        			<h5 class="modal-title">Orden</h5>
+        			<button type="button" class="close" data-dismiss="modal" aria-label="Close" onclick="location.href='bill';">
+          				<span aria-hidden="true">&times;</span>
+        			</button>
+      			</div>
+      		<div class="modal-body">
+    			<p id="orderAlert"></p>
+      		</div>
+  				<div class="modal-footer">
+        			<button type="button" class="btn btn-success" data-dismiss="modal" onclick="location.href='bill';">Aceptar</button>
+      			</div>
+    		</div>
+  		</div>
+	</div>
+	<header class="d-flex flex-row shadow-sm">
+		<div class="w-25 m-2">
+			<img src="../assets/images/logo/logo.png" alt="logo" class="w-25" onclick="location.href='../';">
+		</div>
+		<div class="w-75 d-flex justify-content-end align-items-center">
+			<a href="../shop">
+				<i class="fas fa-shopping-cart mr-4"></i>
+			</a>
+		</div>
+	</header>
+	<section class="container mt-4">
+		<div class="container d-flex justify-content-start">
+			<h2 class="text-secondary">Checkout</h2>
+		</div>
+	</section>
+	<section class="mt-4 d-flex flex-row mb-4">
+		<div class="d-flex flex-column m-4 w-50">
+			<div class="d-flex justify-content-center mb-4">
+				<h4>Orden</h4>
+			</div>
+			<div class="d-flex justify-content-center mt-4">
+				<table class="table">
+					<thead>
+						<tr>
+      						<th scope="col">Nombre</th>
+      						<th scope="col"></th>
+      						<th scope="col">Precio</th>
+    					</tr>
+					</thead>
+					<tbody id="tableBody">
+						<tr>
+							<td>Coca-cola (350ml)</td>
+							<td></td>
+							<td>2$</td>
+						</tr>
+						<tr>
+							<td>Papas Fritas</td>
+							<td></td>
+							<td>2$</td>
+						</tr>
+						<tr>
+							<th>Total</th>
+							<td></td>
+							<td class="text-success font-weight-bold">4$</td>
+						</tr>
+					</tbody>
+				</table>
+			</div>
+		</div>
+			<div class="d-flex flex-column justify-content-center m-4 w-50">
+				<div class="d-flex justify-content-center">
+					<h4>Datos</h4>	
+				</div>
+				<div class="d-flex justify-content-center">
+					<form action="">
+						<div class="row m-4"> <!-- Nombre y apellido -->
+    						<div class="col">
+    							<label for="nombre" class="font-weight-bold">Nombre</label>
+      							<input type="text" class="form-control" placeholder=" " name="nombre" pattern="(/^[A-Za-z]+$/)">
+    						</div>
+    						<div class="col">
+    							<label for="apellido" class="font-weight-bold">Apellido</label>
+      							<input type="text" class="form-control" placeholder=" " name="apellido" required pattern="(/^[A-Za-z]+$/)">
+    						</div>
+  						</div>
+  						<div class="row m-4"> <!-- Nro de tlf y correo -->
+    						<div class="col">
+    							<label for="numero" class="font-weight-bold">Número de teléfono</label>
+      							<input type="tel" class="form-control" placeholder=" " name="telefono"  max="13" required pattern="(/^[A-Za-z]+$/)">
+    						</div>
+  						</div>
+  						<div class="row m-4"> <!-- Direccion -->
+    						<div class="col">
+    							<label for="direccion" class="font-weight-bold">Dirección de entrega</label>
+      							<input type="text" class="form-control" placeholder="" name="direccion" required pattern="(/^[A-Za-z]+$/)">
+    						</div>
+  						</div>
+  						<div class="row m-4"> <!-- Método de pago -->
+    						<div class="col d-flex flex-column">
+    							<label for="pago" class="font-weight-bold">Método de pago</label>
+      							<select class="form-control" name="pago" id="metodo-pago" onchange="showSelectModal(event)">
+      								<option value="efectivo">Divisas en efectivo</option>
+      								<option value="debito">Tarjeta de débito</option>
+      								<option value="zelle">Zelle</option>
+      								<option value="pm">Pago móvil</option>
+      								<option value="transferencia">Transferencia bancaria</option>
+      							</select>
+    						</div>
+  						</div>
+  						<div class="row m-4"> <!-- Comprobante de pago y numero de ref -->
+	    					<div class="col" id="payMethodCol">
+      							<label for="myfile" class="font-weight-bold" id="captureLabel">Foto del efectivo</label>
+								<input type="file" id="dropzoneHolder" class="form-control" name="captura" required onchange="readFile(this)">
+    						</div>
+  						</div>
+					</form>
+				</div>
+				<div class="d-flex justify-content-left ml-4">
+					<span class="text-success text-left font-weight-bold ml-4 mb-4"></span>
+				</div>
+				<div class="d-flex justify-content-center mt-4">
+					<button class="btn btn-success" onclick="processData(event);">Encargar</button>	
+				</div>
+			</div>
+	</section>
+	<footer class="footer pt-4 mt-4">
+		<div class="container d-flex justify-content-center flex-direction-row">
+			<div class="p-2">
+				<a href="https://www.facebook.com/twochefs2/">
+					<i class="fab fa-facebook"></i>	
+				</a>
+			</div>
+			<div class="p-2">
+				<a href="https://www.twitter.com/twochefs2/">
+					<i class="fab fa-twitter"></i>	
+				</a>
+			</div>
+			<div class="p-2">
+				<a href="https://www.instagram.com/twochefs2/">
+					<i class="fab fa-instagram"></i>
+				</a>
+			</div>
+			<div class="p-2">
+				<a href="https://api.whatsapp.com/send?phone=584249207903">
+					<i class="fab fa-whatsapp"></i>
+				</a>
+			</div>
+		</div>
+	</footer>
+	<script src="../assets/js/checkout/loadOrder.js"></script>	
+	<script src="../assets/js/checkout/showSelectModal.js"></script>	
+</body>
+</html>

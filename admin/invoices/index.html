@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Facturas - TwoChefs</title>
+	<!-- JQuery -->
+	<script src="../../assets/js/jquery-3.5.1.slim.min.js"></script>
+	<!-- FontAwesome -->
+	<script src="../../assets/js/7b31fa78fb.js"></script>
+	<!-- Bootstrap -->
+	<link rel="stylesheet" href="../../assets/css/bootstrap.min.css">
+	<!-- Bootstrap JS -->
+	<script src="../../assets/js/bootstrap.min.js"></script>
+	<link rel="stylesheet" type="text/css" href="../../assets/css/admin/products/index.css">
+</head>
+<body>
+	<header class="d-flex flex-row shadow-sm">
+		<div class="w-25 m-2">
+			<img src="../../assets/images/logo/logo.png" alt="logo" class="w-25" onclick="location.href='../';">
+		</div>
+		<div class="w-75 d-flex justify-content-end align-items-center">
+			<a class="text-decoration-none" href="../home/">
+				<span class="text-danger font-weight-bold mr-4">Atrás</span>
+			</a>
+		</div>
+	</header>
+	<section class="container d-flex justify-content-center">
+		<span class="option justify-content-center p-4 text-secondary" onclick="callForm('invoices', 'list')">Listar</span>
+	</section>
+	<section class="container d-flex justify-content-center flex-column">
+		<article class="container d-flex justify-content-center m-4 p-2">
+			<select name="filter" id="filter-select" class="form-control w-25" onchange="getItems('invoices', event.target.value)">
+				<option value="get">Todo</option>
+				<option value="debito">Débito</option>
+				<option value="efectivo">Efectivo</option>
+				<option value="zelle">Zelle</option>
+				<option value="pm">Pago móvil</option>
+				<option value="transferencia">Transferencia</option>
+			</select>
+		</article>
+		<article class="container invoice invoices-holder"></article>
+	</section>
+	<script src="../../assets/js/axios.min.js"></script>
+	<script src="../../assets/js/admin/invoices/callForm.js"></script>
+	<!--<script src="../../assets/js/admin/invoices/filterTable.js"></script>-->
+</body>
+</html>

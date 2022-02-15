@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Factura - Twochefs</title>
+	<!-- jQuery -->
+	<script src="../../assets/js/jquery-3.5.1.slim.min.js"></script>
+	<!-- Popper.js -->
+	<script src="../../assets/js/popper.min.js"></script>
+	<!-- Bootstrap (Javascript) -->
+	<script src="../../assets/js/bootstrap.min.js"></script>
+	<!-- FontAwesome -->
+	<script src="../../assets/js/7b31fa78fb.js"></script>
+	<!-- Axios -->
+	<script src="../../assets/js/axios.min.js"></script>
+	<!-- Dropzone.js -->
+	<script src="../../assets/js/dropzone.min.js"></script>
+	<!-- html2Canvas -->
+	<script src="../../assets/js/html2canvas.min.js"></script>
+	<!-- Bootstrap (CSS) -->
+	<link rel="stylesheet" href="../../assets/css/bootstrap.min.css">
+	<!-- Dom to Image -->
+	<script src="../../assets/js/dom-to-image.js"></script>
+	<!-- FileSaver -->
+	<script src="../../assets/js/FileSaver.js"></script>
+</head>
+<body style="padding: 10%;">
+
+	<div class="modal" tabindex="-1" role="dialog" id="capModal">
+  		<div class="modal-dialog" role="document">
+    		<div class="modal-content">
+      			<div class="modal-header">
+        			<h5 class="modal-title">Captura de la factura</h5>
+        			<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          				<span aria-hidden="true">&times;</span>
+        			</button>
+      			</div>
+      			<div class="modal-body">
+  					
+      			</div>
+  				<div class="modal-footer">
+        			<button type="button" class="btn btn-danger" data-dismiss="modal">Cerrar</button>
+      			</div>
+    		</div>
+  		</div>
+	</div>
+
+	<div class="container">
+		<div class="container mt-4">
+			<div class="logo d-flex justify-content-center flex-column align-items-center">
+				<img src="../../assets/images/logo/logo.png" alt="logo" class="p-4 mt-4" style="width: 20%; background-position: center; background-size: cover; background-repeat: no-repeat;">
+				<span>J-410293853</span>
+			</div>
+			<div id="invoice-holder" class="container d-flex justify-content-center flex-column mt-4"></div>
+			<div id="order-holder" class="container d-flex justify-content-center flex-column mt-4">
+				<div class="d-flex justify-content-center mt-4">
+					<table class="table">
+						<thead>
+							<tr>
+	      						<th scope="col">Nombre</th>
+	      						<th scope="col"></th>
+	      						<th scope="col">Precio</th>
+	    					</tr>
+						</thead>
+						<tbody id="tableBody">
+							<tr>
+								<td>Coca-cola (350ml)</td>
+								<td></td>
+								<td>2$</td>
+							</tr>
+							<tr>
+								<td>Papas Fritas</td>
+								<td></td>
+								<td>2$</td>
+							</tr>
+							<tr>
+								<th>Total</th>
+								<td></td>
+								<td class="text-success font-weight-bold">4$</td>
+							</tr>
+						</tbody>
+					</table>
+				</div>
+			</div>
+		</div>
+		<div class="container m-4 d-flex justify-content-center">
+			<button id="cap-button" class="btn btn-success" style="margin-right: 4%;">Guardar</button>
+		</div>
+		<div class="container m-4 d-flex justify-content-center">
+			<span class="text-danger m-4 p-4" onclick="location.href='../../';">Atrás</span>	
+		</div>
+	</div>
+	<script src="../../assets/js/checkout/bill/getInvoiceInfo.js"></script>
+</body>
+</html>

@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Panel de Administración - TwoChefs</title>
+	<!-- JQuery -->
+	<script src="../assets/js/jquery-3.5.1.js"></script>
+	<!-- FontAwesome -->
+	<script src="../assets/js/7b31fa78fb.js"></script>
+	<!-- Bootstrap -->
+	<link rel="stylesheet" href="../assets/css/bootstrap.min.css"> 
+	<!-- Bootstrap JS -->
+	<script src="../assets/js/bootstrap.min.js"></script>
+</head>
+<body>
+	<section class="container d-flex justify-content-center">
+		<img src="../assets/images/logo/logo.png" alt="Logo Twochefs" class="w-25 m-4" onclick="location.href='../'">
+	</section>
+	<section class="container d-flex justify-content-center">
+		<div class="container d-flex justify-content-center p-4 m-4">
+			<div></div>
+			<div class="d-flex d-flex flex-column shadow-sm rounded p-4">
+				<div class="row p-2 m-2">
+					<div class="col d-flex flex-column">
+						<label for="usuario">Usuario</label>
+						<input class="form-control" type="text" name="user" placeholder="Usuario" required>
+					</div>
+				</div>
+				<div class="row p-2 m-2">
+					<div class="col d-flex flex-column">
+						<label for="clave">Contraseña</label>
+						<input class="form-control" type="password" name="pw"placeholder="Contraseña" required>
+					</div>
+				</div>
+				<div class="row p-2 m-2">
+					<div class="col d-flex flex-column">
+						<button type="button" class="btn btn-success shadow-sm" onclick="login()">Entrar</button>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+	<script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+	<script src="../assets/js/admin/login.js"></script>
+</body>
+</html>

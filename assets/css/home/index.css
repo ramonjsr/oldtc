@@ -1,0 +1,32 @@
+.header {
+	max-height: 0.7rem;
+}
+.img-responsive {
+	width: 50%;
+	background-position: center;
+	background-size: cover;
+	background-repeat: no-repeat;
+}
+.circle {
+	color: white;
+	padding: 6rem 2rem;
+	margin: 2rem;
+}
+.circle-first {
+	background-color: #E84B2C;
+}
+.circle-second {
+	background-color: #553555;
+}
+.circle-thirth {
+	background-color: #ADF1D2;
+}
+.product-image {
+	transition: transform 2s;
+	max-height: 20% !important;
+}
+.product-image:hover {
+	transform: scale(1.2);
+	-webkit-transform: scale(1.2);
+	-moz-transform: scale(1.2); 
+}

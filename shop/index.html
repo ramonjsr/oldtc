@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Shop - Two Chef's Restaurant</title>
+	<!-- JS, Popper.js, and jQuery -->
+	<script src="../assets/js/jquery-3.5.1.slim.min.js"></script>
+	<script src="../assets/js/popper.min.js"></script>
+	<script src="../assets/js/bootstrap.min.js"></script>
+	<script src="../assets/js/jquery-3.5.1.js"></script>
+	<script src="../assets/js/7b31fa78fb.js"></script>
+	<link rel="stylesheet" href="../assets/css/bootstrap.min.css">
+	<script src="../assets/js/bootstrap.min.js"></script>
+	<link rel="stylesheet" href="../assets/css/home/index.css">
+</head>
+<body>
+	<div class="modal" tabindex="-1" role="dialog" id="myModal">
+  		<div class="modal-dialog" role="document">
+    		<div class="modal-content">
+      			<div class="modal-header">
+        			<h5 class="modal-title text-success">Producto agregado</h5>
+        			<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          				<span aria-hidden="true">&times;</span>
+        			</button>
+      			</div>
+      			<div class="modal-body">
+        			<p id="addedAlert">Producto añadido correctamente al carrito</p>
+      			</div>
+      			<div class="modal-footer">
+        			<button type="button" class="btn btn-success" data-dismiss="modal">Aceptar</button>
+      			</div>
+    		</div>
+  		</div>
+	</div>
+	<header class="d-flex flex-row shadow-sm">
+		<div class="w-25 m-2">
+			<img src="../assets/images/logo/logo.png" alt="logo" class="w-25" onclick="location.href='../';">
+		</div>
+		<div class="w-75 d-flex justify-content-end">
+			<div class="w-50 d-flex justify-content-end m-1">
+				<div class="w-75 d-flex justify-content-end align-items-center mr-4">
+					<span class="text-success font-weight-bold mr-4">Productos: 
+						<span class="text-success font-weight-bold" id="productsCounter">0</span>
+					</span>
+					<span class="text-success font-weight-bold" id="orderCounter"></span>
+				</div>
+				<button class="btn btn-success" onclick="finalizeOrder();">Finalizar</button>
+			</div>
+		</div>
+	</header>
+	<section class="container mt-4">
+		<div class="container d-flex justify-content-center">
+			<h2>Menú</h2>
+		</div>
+	</section>
+	<section class="container mt-4">
+		<div class="container d-flex justify-content-start">
+			<h2 class="text-secondary">Bebidas</h2>
+		</div>
+	</section>
+	<section class="container mt-4 d-flex flex-row flex-wrap justify-content-start w-100" id="bebidas">
+	</section>
+	<section class="container mt-4">
+		<div class="container d-flex justify-content-start">
+			<h2 class="text-secondary">Comidas</h2>
+		</div>
+	</section>
+	<section class="container mt-4 d-flex flex-row flex-wrap justify-content-start w-100" id="comidas">
+	</section>
+	<section class="container mt-4">
+		<div class="container d-flex justify-content-start">
+			<h2 class="text-secondary">Postres</h2>
+		</div>
+	</section>
+	<section class="container mt-4 d-flex flex-row flex-wrap justify-content-start w-100" id="postres">
+	</section>
+	<footer class="footer shadow-lg pt-4 mt-4 pb-4">
+		<div class="container d-flex justify-content-center flex-direction-row">
+			<div class="p-2">
+				<a href="https://www.facebook.com/twochefs2/">
+					<i class="fab fa-facebook"></i>	
+				</a>
+			</div>
+			<div class="p-2">
+				<a href="https://www.twitter.com/twochefs2/">
+					<i class="fab fa-twitter"></i>	
+				</a>
+			</div>
+			<div class="p-2">
+				<a href="https://www.instagram.com/twochefs2/">
+					<i class="fab fa-instagram"></i>
+				</a>
+			</div>
+			<div class="p-2">
+				<a href="https://api.whatsapp.com/send?phone=584249207903">
+					<i class="fab fa-whatsapp"></i>
+				</a>
+			</div>
+		</div>
+	</footer>
+	<script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+	<script src="../assets/js/shop/loadItems.js"></script>
+</body>
+</html>
