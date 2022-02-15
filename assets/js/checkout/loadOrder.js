@@ -108,7 +108,7 @@ let setCheckoutTable = (cart, total) => {
 		tableRows = tableRows + tableRow;
 	});
 
-	tableRows+= '<tr><th>Total</th><td></td><td class="text-success font-weight-bold">'+parseInt(total)+'$</td></tr>';
+	tableRows+= '<tr><th>Total</th><td></td><td class="text-success font-weight-bold">'+parseInt(total)+'$ ('+(parseInt(total) * 4.6)+' Bs)</td></tr>';
 	tableElement.innerHTML = tableRows;
 };
 

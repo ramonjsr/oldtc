@@ -39,7 +39,7 @@ const getOrderInfo = () => {
 
 	var openOrderTag = '<div class="d-flex justify-content-center mt-4"><table class="table"><thead><tr><th scope="col">Nombre</th><th scope="col"></th><th scope="col">Precio</th></tr></thead><tbody id="tableBody">';
 
-	var totalOrderTr = '<tr><th>Total</th><td></td><td class="text-success font-weight-bold">'+invoice.total+'$</td></tr>';
+	var totalOrderTr = '<tr><th>Total</th><td></td><td class="text-success font-weight-bold">'+invoice.total+'$ ('+(parseInt(total) * 4.6)+' Bs)</td></tr>';
 
 	var closeOrderTag = '</tbody></table></div>';
 
